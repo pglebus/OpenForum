@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css">
+
+<head>
+	<title>
+		Open Forum
+	</title>
+</head>
+
+<body>
+
+	<!-- JavaScript code can be embedded inside
+		head section or body section -->
+	<script src="speakerslist.js">
+	</script>
+  
+<div class="header">
+  <h1>Open Forum</h1>
+  <nav>
+    <ul>
+      <li><a href="voting.html">Roll Call Voting</a></li>
+      <li><a href="yaynay.html">Yay Nay Voting</a></li>
+    </ul>
+  </nav>
+  <div class="card">
+    <div class="row">
+      <h3 id="curTopic" onclick="changeTopic()">Current Topic: [Click to Change]</h3>
+      <!-- <button class="button" type="button" onclick="changeTopic()"> Change Topic</button> -->
+    </div>
+    <p id="curtalk"> Currently talking: </p>
+    <p id="nextSpeak"> Next to speak:</p>
+    <button class="button" type="button" onclick="currentlyTalking()"> Change Speaker</button>
+    <p id="blankspot"><br</p>
+    <button class="button" id="speakerstimeButton" type="button" onclick="changeSpeakersTime()"> Set Speaker's Time  </button>
+    <p id="speakerstime">0</p>
+  </div>
+</div>
+
+<div class="row"></div>
+
+  <div class="column side" id="overallCol">
+    <h2 id="overallHeader">Overall Speaker's List</h2>
+    <!-- <p id="overallspeakersList">No one yet!</p> -->
+    <button class="button" id="overallButton" type="button" onclick="addToSpeakersList()" > Add to Speaker's List</button>
+  </div>
+  
+
+  <div class="column middle" id="currentCol">
+    <h2 id="curHeader">Current Topic's Speaker's List</h2>
+    <!-- <p id="currentopicList"></p> -->
+    <button id="curButton" class="button" type="button" onclick="addToCurSpeakersList()"> Add to Speaker's List</button>
+  </div>
+
+  
+
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="votingstyle.css">
+
+<head>
+	<title>
+		Open Forum
+	</title>
+</head>
+
+<body>
+
+	<!-- JavaScript code can be embedded inside
+		head section or body section -->
+	<script src="voting.js">
+	</script>
+  
+<div class="header">
+  <h1>Open Forum</h1>
+  <nav>
+    
+    <ul>
+      <li><a href="index.html">Speaker's List</a></li>
+      <li><a href="voting.html">Roll Call Voting</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<div class="header">
+    <div class="row">
+      <h3 id="curTopic" onclick="changeTopic()">Voting Topic: [Click to Change]</h3>
+      <p id="totalBrothers" onclick="changeBrothers()">Total Brothers Present:<br> [Click to Change]</p>
+      <p id="voteYes" onclick="changeVotingYes()"> Voting Yes: <br>[Click to Change] </p>
+      <p id="voteNo" onclick="changeVotingNo()"> Voting No: <br>[Click to Change] </p>
+      <div class="row">
+        <div class="column">
+          <p id="supermajority">Supermajority<br>0</p>
+        </div>
+        <div class="column">
+          <p id="majority">Majority<br>0</p>
+        </div>
+        <div class="column">
+          <p id="yesVotes">Yes votes needed<br>0</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+  <div class="row">
+    <div class="column" id="yesCol">
+      <h2 id="yesHeader">Voting Yes</h2>
+      <p id="yesVoteNum">0</p>
+      <div class="row" style="display: flex; justify-content: center;">
+        <button class="button" type="button" id="yesButton" onclick="yesTally()"> Add Yes Vote </button>
+        <button class="button" type="button" id="yesRemoveButton" onclick="yesRemove()"> Remove Yes Vote </button>
+      </div>
+    </div>
+    
+    <div class="column" id="noCol">
+      <h2 id="noHeader">Voting No</h2>
+      <p id="noVoteNum">0</p>
+      <div class="row" style="display: flex; justify-content: center;">
+        <button class="button" type="button" id="noButton" onclick="noTally()"> Add No Vote </button>
+        <button class="button" type="button" id="noRemoveButton" onclick="noRemove()"> Remove No Vote </button>
+      </div>
+    </div>
+    
+    <div class="column" id="abstainCol">
+      <h2 id="abstainHeader">Abstaining</h2>
+      <p id="abstainVoteNum">0</p>
+      <div class="row" style="display: flex; justify-content: center;">
+        <button class="button" type="button" id="abstainButton" onclick="abstainTally()"> Add Abstain Vote </button>
+        <button class="button" type="button" id="abstainRemoveButton" onclick="abstainRemove()"> Remove Abstain Vote </button>
+      </div>
+    </div>
+  </div>

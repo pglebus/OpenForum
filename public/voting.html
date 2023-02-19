@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="votingstyle.css">
+
+<head>
+	<title>
+		Open Forum
+	</title>
+</head>
+
+<body>
+
+	<!-- JavaScript code can be embedded inside
+		head section or body section -->
+	<script src="voting.js">
+	</script>
+  
+<div class="header">
+  <h1>Open Forum</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Speaker's List</a></li>
+      <li><a href="yaynay.html">Yay Nay Voting</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<div class="header">
+    <div class="row">
+      <h3 id="curTopic" onclick="changeTopic()">Voting Topic: [Click to Change]</h3>
+      <p id="totalBrothers" onclick="changeBrothers()">Total Brothers Present:<br> [Click to Change]</p>
+      <p id="voteYes" onclick="changeVotingYes()"> Voting Yes:<br> [Click to Change]</p>
+      <p id="voteNo" onclick="changeVotingNo()"> Voting No:<br> [Click to Change]</p>
+      <div class="row">
+        <div class="column">
+          <p id="supermajority">Supermajority<br>0</p>
+        </div>
+        <div class="column">
+          <p id="majority">Majority<br>0</p>
+        </div>
+        <div class="column">
+          <p id="yesVotes">Yes votes needed<br>0</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+  <div class="row">
+    <div class="column" id="yesCol">
+      <h2 id="yesHeader">Voting Yes</h2>
+      <button class="button" type="button" id="yesButton" onclick="addYesVote()"> Add Yes Vote </button>
+    </div>
+    
+    <div class="column" id="noCol">
+      <h2 id="noHeader">Voting No</h2>
+      <button class="button" type="button" id="noButton" onclick="addNoVote()"> Add No Vote </button>
+    </div>
+    
+    <div class="column" id="abstainCol">
+      <h2 id="abstainHeader">Abstaining</h2>
+      <button class="button" type="button" id="abstainButton" onclick="addAbstainVote()"> Add Abstain Vote </button>
+    </div>
+  </div>
