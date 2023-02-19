@@ -160,10 +160,11 @@ function startCountdown()
             var distance = time - 1;
             document.getElementById("speakerstime").innerHTML = distance;
     
-            if (distance <= 0) {
+            if (distance == 0) {
                 clearInterval(x);
                 alert("The Current Speaker's Time Is Up");
-                setTimeout(() => {  document.getElementById("speakerstime").innerHTML = initialTime; }, 3500);
+                //document.getElementById("speakerstime").innerHTML = initialTime;
+                setTimeout(() => {  document.getElementById("speakerstime").innerHTML = initialTime; }, 1500);
               }
     
         }, 1000);
